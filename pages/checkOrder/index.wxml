@@ -1,0 +1,35 @@
+<wxs module="filter" src="../../utils/numFr.wxs"></wxs>
+<view class="main">
+    <view class="toper">
+        <view class="ub ub-ver ub-ac ub-pc storelist plr15" bindtap="openStore">
+            <view style="color:#dedede;font-size:24rpx">核销门店</view>
+            <view class="storeName ub ub-ac ub-pc">
+                <view class="name" hidden="{{!storeId}}">{{storeName}}</view>
+                <view class="arrow-right" hidden="{{!isAdmin}}"></view>
+            </view>
+        </view>
+        <view class="ub ub-ac inputDiv">
+            <input type="number" class="ub-f1 code" bindinput="bindCode" maxlength="16" placeholder="请输入核销码"/>
+            <view class="ub ub-ac ub-pc">
+            	<image class="icon_sao" src="/images/icon_sao.png" bindtap="scanCode"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="itemWrap">
+        <view class="item" wx:for="{{useList}}" wx:key="un">
+            <text class="timeTit" wx:if="{{index==0}}">{{item.useDate}}</text>
+            <text class="timeTit" wx:if="{{index>0&&useList[index-1].useDate!=item.useDate}}">{{item.useDate}}</text>
+            <view class="itemCon" bindtap="toDetail" data-id="{{item.useOrderId}}">
+                <view class="ub ub-ac subItem">
+                    <text class="ub-f1 pName textnowarp">{{item.productName}}</text>
+                    <text style="margin-left: 20rpx;font-size:30rpx">+{{filter.toFix(item.costPrice)}}元</text>
+                </view>
+                <view class="ub ub-ac subItem">
+                    <text class="ub-f1 tx-l bc" style="font-size:24rpx">{{item.useTime}}</text>
+                    <text class="bc" style="font-size:24rpx">已核销{{item.useNum}}份</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

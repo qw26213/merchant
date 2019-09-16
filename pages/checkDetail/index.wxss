@@ -1,0 +1,9 @@
+view{font-size: 28rpx;}
+page{background-color: #f1f1f1}
+.main{height: 100%;overflow: auto;}
+.content{padding: 30rpx 30rpx 0;}
+.tit{line-height: 52rpx;color: #666;font-size: 24rpx;}
+.itemWrap{border-radius: 4px;margin-bottom: 30rpx;padding:20rpx 30rpx 15rpx;background-color: #fff}
+.item{padding: 16rpx 0;}
+.con{font-size: 26rpx;}
+.btn{height: 88rpx; box-shadow: 0 0 16rpx 0 rgba(230, 229, 235, 50);background-color: #BE8531;color: #fff;border-radius: 10rpx;border:#BE8531 2rpx solid;margin-top: 60rpx;font-size: 34rpx}

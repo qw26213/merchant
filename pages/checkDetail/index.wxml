@@ -1,0 +1,49 @@
+<wxs module="filter" src="../../utils/numFr.wxs"></wxs>
+<view class="main">
+    <view class="content">
+        <view class="bgb itemWrap">
+            <view class="tit">顾客信息</view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">顾客姓名</view>
+                <view class="con">{{orderInfo.customerName}}</view>
+            </view>
+        </view>
+        <view class="bgb itemWrap">
+            <view class="tit">商品信息</view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">商品名称</view>
+                <view class="con">{{orderInfo.productName}}</view>
+            </view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">核销份数</view>
+                <view class="con">{{orderInfo.usedNum}}份</view>
+            </view>
+        </view>
+        <view class="bgb itemWrap">
+            <view class="tit">其它信息</view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">核销门店</view>
+                <view class="con">{{orderInfo.useStoreName}}</view>
+            </view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">核销员工</view>
+                <view class="con">{{orderInfo.oviewUserName}}</view>
+            </view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">核销时间</view>
+                <view class="con">{{orderInfo.useTime}}</view>
+            </view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">核销码</view>
+                <view>
+                    <view class="con" wx:for="{{orderInfo.codes}}" wx:key="un">{{item}}</view>
+                </view>
+            </view>
+            <view class="item ub ub-ac">
+                <view class="ub-f1">订单编号</view>
+                <view class="con">{{orderId}}</view>
+            </view>
+        </view>
+        <view class="btn ub ub-ac ub-pc" bindtap="printOrder">重打印</view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+.itemWrap .item{border-top:1px #eee solid;}
+.pName{text-align: left;font-size: 28rpx;}
+.itemWrap .item:last-child{border-bottom:none;}
+.toper{padding:0 30rpx 40rpx;background: #BE8531;border-bottom: 1px #eee solid;}
+.code{height: 88rpx;font-size: 28rpx;padding-left: 20rpx}
+.time{padding-left: 30rpx;font-size: 24rpx;color: #999;line-height: 64rpx;}
+.mr10{margin-right: 20rpx}
+.textnowarp { white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.inputDiv{background-color: #fff;border-radius: 4px;}
+.inputDiv view{width: 80rpx;height: 80rpx;margin-right: 8rpx}
+.icon_sao{display: block;width: 60rpx;height: 60rpx;}
+
+text{display: block;}
+.itemCon{padding: 12rpx 30rpx 15rpx;background-color: #fff}
+.subItem{height: 40rpx;margin-top: 8rpx;background-color: #fff;}
+.btn{margin-top: 50rpx;}
+.storelist{height: 180rpx;}
+.storeName{height: 60rpx;line-height:60rpx;}
+.storeName .name{font-size: 34rpx;color: #fff;margin-top: 5rpx}
+.storeName .placeholder{font-size: 30rpx;color: #dedede;}
+.timeTit{height: 60rpx;line-height: 60rpx;padding-left: 30rpx;font-size: 26rpx;color: #666;background-color: #f1f1f1}
+.f12{font-size: 24rpx}

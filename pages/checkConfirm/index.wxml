@@ -1,0 +1,29 @@
+<wxs module="filter" src="../../utils/numFr.wxs"></wxs>
+<view class="main">
+    <view class="toper ub ub-ver ub-ac ub-pc">
+        <image src="{{orderInfo.customerAvatar}}" class="user udb"></image>
+        <view class="mt10">{{orderInfo.customerName}}</view>
+    </view>
+    <view class="tit">本次核销信息</view>
+    <view class="plr15 bgb">
+        <view class="item bbc ub ub-ac">
+            <view class="">商品名称</view>
+            <view class="ub-f1 pName">{{orderInfo.productName}}</view>
+        </view>
+        <view class="item bbc ub ub-ac">
+            <view class="ub-f1">剩余有效天数</view>
+            <view class="bc1">{{orderInfo.validDays>=0?orderInfo.validDays+'天':'已过期'}}</view>
+        </view>
+        <view class="item ub ub-ac">
+            <view class="ub-f1">本次核销份数</view>
+            <view class="ub ub-ac numBox">
+                <!-- <span bindtap="delOne" class="ctlbtn del"></span> -->
+                <text class="number btbc">{{bookNum}}</text>
+                <!-- <span bindtap="addOne" class="ctlbtn add"></span> -->
+            </view>
+        </view>
+    </view>
+    <view class="mt30 plr15">
+        <view class="btn_common" bindtap="submit">确认核销</view>
+    </view>
+</view>

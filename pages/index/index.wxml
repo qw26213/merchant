@@ -1,0 +1,43 @@
+<wxs module="filter" src="../../utils/numFr.wxs"></wxs>
+<view class="main">
+    <view class="content">
+        <view class="ub ub-ac">
+            <view class="con1 ub-f1">
+                <view class="tit tx-l">实收金额(元)</view>
+                <view class="balance mt10">{{filter.toFix(dataInfo.viewayMoney)}}</view>
+            </view>
+            <view class="con1 ub-f1" style="margin-left:0.30rem">
+                <view class="tit tx-l">交易金额(元)</view>
+                <view class="balance mt10">{{filter.toFix(dataInfo.ordersMoney)}}</view>
+            </view>
+        </view>
+        <view class="con2 ub ub-ver">
+            <view class="tit tx-c">账户总余额(元)</view>
+            <view class="balance mt10 tx-c">{{filter.toFix(dataInfo.totalBalance)}}</view>
+            <view class="ub w_100" style="margin-top:30rpx">
+                <view class="ub-f1 ub ub-ver ub-ac ub-pc item">
+                    <view class="amount">{{filter.toFix(dataInfo.addMoney)}}</view>
+                    <view class="txt">今日储值金额</view>
+                </view>
+                <view class="ub-f2 ub ub-ver ub-ac ub-pc item">
+                    <view class="amount">{{filter.toFix(dataInfo.givingMoney)}}</view>
+                    <view class="txt">今日赠送金额</view>
+                </view>
+                <view class="ub-f1 ub ub-ver ub-ac ub-pc item">
+                    <view class="amount">{{filter.toFix(dataInfo.viewreviewayMoney)}}</view>
+                    <view class="txt">今日消费金额</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btn ub ub-ac ub-pc" bindtap="toCheck">去核销</view>
+    <view class="vnumber">V1.0.8</view>
+
+    <view class="modal" hidden="{{isLogin}}">
+        <view class="mCon ub ub-ver ub-ac ub-pc">
+            <image class="logo" src="/images/logo.png"></image>
+            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" lang="zh_CN" class="ub ub-ac ub-pc">微信登录</button>
+        </view>
+    </view>
+
+</view>
